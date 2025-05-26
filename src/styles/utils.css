@@ -5,15 +5,16 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: #888;
+  color: var(--gray-light);
+  margin: 30px;
 }
 
 .spinner {
-  border: 4px solid lightgray;
-  border-top: 4px solid lightblue;
+  border: 6px solid #dadada;
+  border-top: 6px solid var(--gray);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   animation: spin 1s linear infinite;
   margin-bottom: 10px;
 }

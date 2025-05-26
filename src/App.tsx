@@ -2,12 +2,13 @@ import { useState, useRef } from "react";
 import CharacterList from "./components/CharacterList";
 import CharacterDetail from "./components/CharacterDetail";
 import "./styles/App.css";
-import "./styles/components.css";
+import "./styles/character-list.css";
+import "./styles/character-details.css";
 import "./styles/utils.css";
 
 function App() {
   const [selectedCharacterId, setSelectedCharacterId] = useState<string | null>(
-    null
+    null,
   );
 
   const sidebarRef = useRef<HTMLElement>(null);

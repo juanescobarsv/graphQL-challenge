@@ -65,7 +65,7 @@ const CharacterList: React.FC<CharacterListProps> = ({
               };
             },
           }).catch((err) =>
-            console.error("Error fetching more characters:", err)
+            console.error("Error fetching more characters:", err),
           );
         }
       }
