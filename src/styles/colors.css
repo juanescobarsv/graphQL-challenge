@@ -1,7 +1,31 @@
 :root {
-  --dark: #121212;
-  --gray: #333333;
-  --gray-light: #828282;
-  --white: #ffffff;
-  --white-dark: #f2f2f2;
+  /* Light Mode Colors (Default) */
+  --background-primary: #ffffff;
+  --background-secondary: #f2f2f2;
+  --text-primary: #333333;
+  --text-secondary: #828282;
+  --header-bg: #121212;
+  --header-text: #f2f2f2;
+  --border-color: rgba(0, 0, 0, 0.15);
+  --card-bg: var(--background-primary);
+  --card-hover-bg: rgba(18, 18, 18, 0.05);
+  --card-selected-bg: rgba(18, 18, 18, 0.1);
+  --button-hover-bg: rgba(18, 18, 18, 0.1);
+  --error: #ec5757;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --background-primary: #121212;
+  --background-secondary: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --header-bg: #333333;
+  --header-text: #f2f2f2;
+  --border-color: #333333;
+  --card-bg: var(--background-primary);
+  --card-hover-bg: rgba(18, 18, 18, 0.05);
+  --card-selected-bg: rgba(18, 18, 18, 0.1);
+  --button-hover-bg: rgba(18, 18, 18, 0.1);
+  --error: #ec5757;
 }

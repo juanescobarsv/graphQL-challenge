@@ -5,13 +5,13 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: var(--gray-light);
+  color: var(--header-text);
   margin: 30px;
 }
 
 .spinner {
   border: 6px solid #dadada;
-  border-top: 6px solid var(--gray);
+  border-top: 6px solid var(--header-bg);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -35,7 +35,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: red;
+  color: var(--error);
   text-align: center;
   padding: 20px;
 }
