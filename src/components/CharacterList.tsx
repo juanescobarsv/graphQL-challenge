@@ -13,7 +13,7 @@ import ErrorMessage from "../utils/ErrorMessage";
 interface CharacterListProps {
   onCharacterClick: (id: string) => void;
   selectedCharacterId: string | null;
-  scrollContainerRef: React.RefObject<HTMLElement>;
+  scrollContainerRef: React.RefObject<HTMLElement | null>;
 }
 
 const CharacterList: React.FC<CharacterListProps> = ({
