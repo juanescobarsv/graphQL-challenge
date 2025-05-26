@@ -44,10 +44,8 @@ export const GET_CHARACTERS = gql`
       }
       results {
         id
+        name
         species
-        origin {
-          name
-        }
       }
     }
   }

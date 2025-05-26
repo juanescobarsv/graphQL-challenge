@@ -12,6 +12,9 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   onClick,
   isSelected,
 }) => {
+  console.log("CharacterCard rendered. Character prop:", character);
+  console.log("Character name:", character?.name);
+
   return (
     <div
       className={`character-card ${isSelected ? "selected" : ""}`}
