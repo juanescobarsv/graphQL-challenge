@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  border-bottom: 1px solid #828282;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -31,7 +31,6 @@
   margin-left: 10px;
 }
 
-/* Add a class for selected card */
 .character-card.selected {
   background-color: rgba(18, 18, 18, 0.1);
   border-left: 5px solid #121212;
@@ -52,8 +51,12 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: #888;
+  color: red;
   font-size: 18px;
+}
+
+.character-detail-placeholder {
+  color: #828282;
 }
 
 .detail-name {
@@ -64,22 +67,20 @@
   font-weight: bold;
 }
 
-/* 
-TBD
 .detail-image {
-  display: block; 
+  display: block;
   margin: 0 auto 25px auto;
-  width: 200px; 
+  width: 200px;
   height: 200px;
-  border-radius: 50%; 
+  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #eee;
-} */
+  border: 4px solid #333333;
+}
 
 .detail-section {
   margin-bottom: 20px;
   padding-top: 15px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .detail-section:first-of-type {
@@ -87,36 +88,41 @@ TBD
 }
 
 .detail-section h3 {
-  font-size: 20px;
-  color: #555;
+  color: #333333;
   margin-bottom: 15px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .detail-section p {
   margin-bottom: 8px;
-  color: #666;
+  color: #333333;
   font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 40px;
 }
 
 .detail-section p strong {
-  color: #333;
-  font-weight: 500;
-  min-width: 120px;
-  display: inline-block;
+  color: #828282;
+  font-weight: 700;
+}
+
+.character-card-species {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .episode-list {
   list-style: none;
-  padding: 0;
+  padding-inline: 40px;
 }
 
 .episode-list li {
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.10);
   padding: 8px 12px;
   margin-bottom: 5px;
   border-radius: 4px;
-  border: 1px solid #eee;
-  color: #555;
-  font-size: 15px;
+  border: 1px solid #ffffff;
+  color: #333333;
+  font-size: 16px;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import type {
   GetCharactersData,
@@ -13,11 +13,13 @@ import ErrorMessage from "../utils/ErrorMessage";
 interface CharacterListProps {
   onCharacterClick: (id: string) => void;
   selectedCharacterId: string | null;
+  scrollContainerRef: React.RefObject<HTMLElement>;
 }
 
 const CharacterList: React.FC<CharacterListProps> = ({
   onCharacterClick,
   selectedCharacterId,
+  scrollContainerRef,
 }) => {
   const { data, loading, error, fetchMore } = useQuery<
     GetCharactersData,
@@ -28,7 +30,6 @@ const CharacterList: React.FC<CharacterListProps> = ({
   });
 
   const [hasMore, setHasMore] = useState<boolean>(true);
-  const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (loading || !data) return;
@@ -38,8 +39,9 @@ const CharacterList: React.FC<CharacterListProps> = ({
     }
 
     const handleScroll = () => {
-      if (listRef.current) {
-        const { scrollTop, scrollHeight, clientHeight } = listRef.current;
+      if (scrollContainerRef.current) {
+        const { scrollTop, scrollHeight, clientHeight } =
+          scrollContainerRef.current;
         if (
           scrollTop + clientHeight >= scrollHeight - 100 &&
           data.characters.info.next
@@ -65,28 +67,26 @@ const CharacterList: React.FC<CharacterListProps> = ({
           }).catch((err) =>
             console.error("Error fetching more characters:", err)
           );
-          // } else if (!data.characters.info.next && hasMore) {
-          //   setHasMore(false);
         }
       }
     };
 
-    const currentListRef = listRef.current;
-    if (currentListRef) {
-      currentListRef.addEventListener("scroll", handleScroll);
+    const currentScrollContainerRef = scrollContainerRef.current;
+    if (currentScrollContainerRef) {
+      currentScrollContainerRef.addEventListener("scroll", handleScroll);
     }
 
     return () => {
-      if (currentListRef) {
-        currentListRef.removeEventListener("scroll", handleScroll);
+      if (currentScrollContainerRef) {
+        currentScrollContainerRef.removeEventListener("scroll", handleScroll);
       }
     };
-  }, [loading, data, fetchMore, hasMore]);
+  }, [loading, data, fetchMore, hasMore, scrollContainerRef]);
 
   if (error) return <ErrorMessage message={`Error: ${error.message}`} />;
 
   return (
-    <div className="character-list-container" ref={listRef}>
+    <div className="character-list-container">
       {loading && !data ? (
         <LoadingSpinner />
       ) : (

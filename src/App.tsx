@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import CharacterList from "./components/CharacterList";
 import CharacterDetail from "./components/CharacterDetail";
 import "./styles/App.css";
@@ -10,6 +10,8 @@ function App() {
     null
   );
 
+  const sidebarRef = useRef<HTMLElement>(null);
+
   const handleCharacterClick = (id: string) => {
     setSelectedCharacterId(id);
   };
@@ -19,11 +21,13 @@ function App() {
       <header className="app-header">
         <h1>Ravn Rick and Morty Registry</h1>
       </header>
+
       <div className="content-area">
-        <aside className="sidebar">
+        <aside className="sidebar" ref={sidebarRef}>
           <CharacterList
             onCharacterClick={handleCharacterClick}
             selectedCharacterId={selectedCharacterId}
+            scrollContainerRef={sidebarRef}
           />
         </aside>
 
