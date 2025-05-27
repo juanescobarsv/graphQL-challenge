@@ -1,22 +1,15 @@
-# React Nerdery GraphQL Challenge
+# React Nerdery GraphQL Challenge: 🐦‍⬛🧪 Ravn Rick and Morty Registry
 
-Apollo Client Setup:
-Properly configure Apollo Client for GraphQL integration.
+A modern and responsive Rick and Morty character registry built with React.
 
-Character Pagination:
-Fetch characters using pagination. (The API returns 20 characters per page.)
-Trigger fetching the next page when the user scrolls to the bottom of the list.
+## 🛠️ Tech Stack
 
-Character Details:
-Fetch and display character details when a single card is clicked.
-
-State Management:
-Handle loading states for better user experience.
-Implement error handling for potential issues such as network errors or invalid responses.
-
-UI Design:
-Match the Figma design as closely as possible in terms of layout, colors, typography, and spacing.
-
-Deployment:
-Deploy the compiled project to Vercel for live access.
+- **React**
+- **TypeScript**
+- **CSS Modules** – for scoped styling
+- **Vite**
+- **NPM**
+- **GraphQL**
+- **Apollo**
+- **SF Pro Display** – custom font
 
