@@ -7,9 +7,11 @@ A modern and responsive Rick and Morty character registry built with React.
 - **React**
 - **TypeScript**
 - **CSS Modules** – for scoped styling
-- **SF Pro Display** – custom font
 - **Vite**
 - **NPM**
+- **GraphQL**
+- **Apollo**
+- **SF Pro Display** – custom font
 
 ## 📸 Preview
 
