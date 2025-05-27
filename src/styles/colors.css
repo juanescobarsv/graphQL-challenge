@@ -10,7 +10,7 @@
   --card-bg: var(--background-primary);
   --card-hover-bg: rgba(18, 18, 18, 0.05);
   --card-selected-bg: rgba(18, 18, 18, 0.1);
-  --button-hover-bg: rgba(18, 18, 18, 0.1);
+  --button-hover-bg: #333333;
   --error: #ec5757;
 }
 
@@ -23,9 +23,9 @@ body.dark-mode {
   --header-bg: #333333;
   --header-text: #f2f2f2;
   --border-color: #333333;
-  --card-bg: var(--background-primary);
-  --card-hover-bg: rgba(18, 18, 18, 0.05);
-  --card-selected-bg: rgba(18, 18, 18, 0.1);
-  --button-hover-bg: rgba(18, 18, 18, 0.1);
-  --error: #ec5757;
+  --card-bg: #282828;
+  --card-hover-bg: #333333;
+  --card-selected-bg: #4a4a4a;
+  --button-hover-bg: #282828;
+  --error: #e13b3b;
 }

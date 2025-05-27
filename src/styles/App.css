@@ -29,8 +29,12 @@ body {
   background-color: var(--header-bg);
   color: var(--header-text);
   padding: 16px 33px;
-  text-align: left;
+  /* text-align: left; */
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 h1 {
