@@ -1,0 +1,51 @@
+/* LOADING SPINNER*/
+.loading-spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--header-text);
+  margin: 30px;
+}
+
+.spinner {
+  border: 6px solid #dadada;
+  border-top: 6px solid var(--header-bg);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ERROR  MESSAGE*/
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--error);
+  text-align: center;
+  padding: 20px;
+}
+
+.error-message h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.error-message p {
+  margin-bottom: 8px;
+  font-size: 16px;
+}

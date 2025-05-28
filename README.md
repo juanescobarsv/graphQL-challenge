@@ -13,3 +13,6 @@ A modern and responsive Rick and Morty character registry built with React.
 - **Apollo**
 - **SF Pro Display** – custom font
 
+=## 📸 Preview
+
+![preview](./src/assets/screen.png)
