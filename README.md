@@ -1,4 +1,4 @@
-# 🐦‍⬛🧪 Ravn Rick and Morty Registry
+# React Nerdery GraphQL Challenge: 🐦‍⬛🧪 Ravn Rick and Morty Registry
 
 A modern and responsive Rick and Morty character registry built with React.
 
@@ -13,6 +13,6 @@ A modern and responsive Rick and Morty character registry built with React.
 - **Apollo**
 - **SF Pro Display** – custom font
 
-## 📸 Preview
+=## 📸 Preview
 
 ![preview](./src/assets/screen.png)
